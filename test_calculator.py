@@ -1,5 +1,5 @@
 import pytest
-from calculator import divide, average
+from calculator import divide, average, power
 
 def test_divide_normal():
     assert divide(10, 2) == 5.0

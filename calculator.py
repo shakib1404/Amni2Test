@@ -2,7 +2,12 @@ def divide(a, b):
     return a / b          # BUG: crashes on b=0
 
 def average(nums):
-    return sum(nums) / len(nums)   # BUG: crashes on empty list
+    if not nums:
+        raise ValueError("Cannot calculate average of an empty list")
+    return sum(nums) / len(nums)
+
+def power(a, b):
+    return a ** b
 
 def celsius_to_fahrenheit(c):
     return c * 9/5 + 32
